@@ -1,3 +1,10 @@
 package xacml
 
-type AdviceExpressions struct {}
+import "encoding/xml"
+
+// 5.XX: TODO DESCRIPTION HERE
+type AdviceExpressions struct {
+	XMLName xml.Name `xml:"AdviceExpressions"`
+
+	// Insert fields here
+}

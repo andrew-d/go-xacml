@@ -1,3 +1,10 @@
 package xacml
 
-type VariableDefinition struct {}
+import "encoding/xml"
+
+// 5.XX: TODO DESCRIPTION HERE
+type VariableDefinition struct {
+	XMLName xml.Name `xml:"VariableDefinition"`
+
+	// Insert fields here
+}

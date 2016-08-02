@@ -1,3 +1,10 @@
 package xacml
 
-type PolicyIdentifierList struct {}
+import "encoding/xml"
+
+// 5.XX: TODO DESCRIPTION HERE
+type PolicyIdentifierList struct {
+	XMLName xml.Name `xml:"PolicyIdentifierList"`
+
+	// Insert fields here
+}
