@@ -16,3 +16,13 @@ type Advice struct {
 	// interpreted by the PEP.
 	Assignments []AttributeAssignment `xml:"AttributeAssignment"`
 }
+
+func (a Advice) Validate(errs *Errors) {
+	if a.AdviceId == "" {
+		errs.Addf("AdviceId not given")
+	}
+
+	for i, assignment := range a.Assignments {
+		assignment.Validate(errs.SubN("Assignments", i))
+	}
+}

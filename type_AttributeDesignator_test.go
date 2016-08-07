@@ -24,6 +24,6 @@ func Test_AttributeDesignator(t *testing.T) {
 	assert.Equal(t, "urn:oasis:names:tc:xacml:1.0:action:action-id", dest.AttributeId)
 	assert.Equal(t, "urn:oasis:names:tc:xacml:3.0:attribute-category:action", dest.Category)
 	assert.Equal(t, "http://www.w3.org/2001/XMLSchema#string", dest.DataType)
-	assert.Equal(t, "an-issuer", dest.Issuer)
-	assert.Equal(t, false, dest.MustBePresent)
+	assert.Equal(t, "an-issuer", *dest.Issuer)
+	assert.Equal(t, false, *dest.MustBePresent)
 }

@@ -23,22 +23,37 @@ type AttributeDesignator struct {
 
 	// This attribute SHALL specify the AttributeId with which to match the
 	// attribute.
-	AttributeId string `xml:",attr"` // TODO: required
+	AttributeId string `xml:",attr"`
 
 	// This attribute SHALL specify the Category with which to match the
 	// attribute.
-	Category string `xml:",attr"` // TODO: required
+	Category string `xml:",attr"`
 
 	// The bag returned by the <AttributeDesignator> element SHALL contain
 	// values of this data-type.
-	DataType string `xml:",attr"` // TODO: required
+	DataType string `xml:",attr"`
 
 	// This attribute, if supplied, SHALL specify the Issuer with which to
 	// match the attribute.
-	Issuer string `xml:",attr"`
+	Issuer *string `xml:",attr"`
 
 	// This attribute governs whether the element returns “Indeterminate” or an
 	// empty bag in the event the named attribute is absent from the request
 	// context.  See Section 7.3.5.  Also see Sections 7.19.2 and 7.19.3.
-	MustBePresent bool `xml:",attr"` // TODO: required
+	MustBePresent *bool `xml:",attr"`
+}
+
+func (a *AttributeDesignator) Validate(errs *Errors) {
+	if a.Category == "" {
+		errs.Addf("Category not given")
+	}
+	if a.DataType == "" {
+		errs.Addf("DataType not given")
+	}
+	if a.Issuer != nil && *a.Issuer == "" {
+		errs.Addf("Issuer cannot be empty")
+	}
+	if a.MustBePresent == nil {
+		errs.Addf("MustBePresent not given")
+	}
 }

@@ -13,3 +13,9 @@ type AttributeValue struct {
 	// TODO: Do we need to use "innerxml", or can we actually use "chardata"?
 	Value string `xml:",chardata"`
 }
+
+func (a AttributeValue) Validate(errs *Errors) {
+	if a.DataType == "" {
+		errs.Addf("DataType not given")
+	}
+}

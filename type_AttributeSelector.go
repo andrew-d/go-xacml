@@ -17,7 +17,7 @@ type AttributeSelector struct {
 	// indicates the attributes category containing the applicable
 	// ContextSelectorId attribute, if the element includes a ContextSelectorId
 	// xml attribute.
-	Category string // TODO: required
+	Category string
 
 	// This attribute refers to the attribute (by its AttributeId) in the
 	// request context in the category given by the Category attribute. The
@@ -31,14 +31,29 @@ type AttributeSelector struct {
 	// This attribute SHALL contain an XPath expression to be evaluated against
 	// the specified XML content.  See Section 7.3.7 for details of the XPath
 	// evaluation during <AttributeSelector> processing.
-	Path string // TODO: required
+	Path string
 
 	// The attribute specifies the datatype of the values returned from the
 	// evaluation of this <AttributeSelector> element.
-	DataType string // TODO: required
+	DataType string
 
 	// This attribute governs whether the element returns “Indeterminate” or an
 	// empty bag in the event the XPath expression selects no node.  See
 	// Section 7.3.5.  Also see Sections 7.19.2 and 7.19.3.
-	MustBePresent bool // TODO: required
+	MustBePresent *bool
+}
+
+func (a *AttributeSelector) Validate(errs *Errors) {
+	if a.Category == "" {
+		errs.Addf("Category not given")
+	}
+	if a.Path == "" {
+		errs.Addf("Path not given")
+	}
+	if a.DataType == "" {
+		errs.Addf("DataType not given")
+	}
+	if a.MustBePresent == nil {
+		errs.Addf("MustBePresent not given")
+	}
 }

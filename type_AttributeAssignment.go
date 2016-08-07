@@ -15,19 +15,34 @@ type AttributeAssignment struct {
 	XMLName xml.Name `xml:"AttributeAssignment"`
 
 	// The attribute identifier
-	AttributeId string `xml:",attr"` // TODO: required
+	AttributeId string `xml:",attr"`
 
 	// An optional category of the attribute. If this attribute is missing, the
 	// attribute has no category. The PEP SHALL interpret the significance and
 	// meaning of any Category attribute. Non-normative note: an expected use
 	// of the category is to disambiguate attributes which are relayed from the
 	// request.
-	Category string `xml:",attr"`
+	Category *string `xml:",attr"`
 
 	// An optional issuer of the attribute. If this attribute is missing, the
 	// attribute has no issuer. The PEP SHALL interpret the significance and
 	// meaning of any Issuer attribute. Non-normative note: an expected use of
 	// the issuer is to disambiguate attributes which are relayed from the
 	// request.
-	Issuer string `xml:",attr"`
+	Issuer *string `xml:",attr"`
+}
+
+func (a AttributeAssignment) Validate(errs *Errors) {
+	if a.AttributeId == "" {
+		errs.Addf("AttributeId not given")
+	}
+	if a.Category != nil && *a.Category == "" {
+		errs.Addf("Category given, but cannot be empty")
+	}
+	if a.Issuer != nil && *a.Issuer == "" {
+		errs.Addf("Issuer given, but cannot be empty")
+	}
+
+	// Note: not usnig errs.Sub, since this is embedded
+	a.AttributeValue.Validate(errs)
 }
