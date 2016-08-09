@@ -8,3 +8,6 @@ type PolicyIdReference struct {
 
 	// Insert fields here
 }
+
+func (p PolicyIdReference) Validate(errs *Errors) {
+}

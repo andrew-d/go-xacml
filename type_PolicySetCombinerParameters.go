@@ -8,3 +8,6 @@ type PolicySetCombinerParameters struct {
 
 	// Insert fields here
 }
+
+func (p PolicySetCombinerParameters) Validate(errs *Errors) {
+}
