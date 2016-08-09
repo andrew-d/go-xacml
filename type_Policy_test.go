@@ -15,6 +15,7 @@ func Test_Policy(t *testing.T) {
 		<Description>test policy</Description>
 		<Target></Target>
 		<Rule Effect="Permit" RuleId="test-rule">
+			<Description>test rule</Description>
 			<Target>
 				<AnyOf>
 					<AllOf>
@@ -66,12 +67,12 @@ func Test_Policy(t *testing.T) {
 
 	assert.Equal(t, "test-policy", dest.PolicyId)
 	assert.Equal(t, "urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable", dest.RuleCombiningAlgId)
-
-	// TODO: assert.Equal(t, "Test Policy", dest.Description)
+	assert.Equal(t, "test policy", dest.Description)
 
 	if assert.Len(t, dest.Rules, 2) {
 		assert.Equal(t, "test-rule", dest.Rules[0].RuleId)
+		assert.Equal(t, "test rule", dest.Rules[0].Description)
+
 		assert.Equal(t, "deny-rule", dest.Rules[1].RuleId)
 	}
-
 }

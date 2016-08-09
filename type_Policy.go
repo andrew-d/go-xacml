@@ -62,7 +62,7 @@ type Policy struct {
 	MaxDelegationDepth int `xml:",attr"`
 
 	// A free-form description of the policy.  See Section 5.2.
-	Description *Description `xml:"Description"`
+	Description string `xml:"Description"`
 
 	// Attributes of the issuer of the policy.
 	PolicyIssuer *PolicyIssuer `xml:"PolicyIssuer"`
@@ -141,10 +141,6 @@ func (p Policy) Validate(errs *Errors) {
 	}
 
 	// Optional children
-	if p.Description != nil {
-		p.Description.Validate(errs.Sub("Description"))
-	}
-
 	if p.PolicyIssuer != nil {
 		p.PolicyIssuer.Validate(errs.Sub("PolicyIssuer"))
 	}

@@ -19,7 +19,7 @@ type Rule struct {
 	Effect string `xml:",attr"`
 
 	// A free-form description of the rule.
-	Description *Description `xml:"Description"`
+	Description string `xml:"Description"`
 
 	// Identifies the set of decision requests that the <Rule> element is
 	// intended to evaluate.  If this element is omitted, then the target for
