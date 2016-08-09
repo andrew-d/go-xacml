@@ -158,6 +158,12 @@ func (p PolicySet) Validate(errs *Errors) {
 	}
 
 	// Child elements
+	if p.PolicyIssuer != nil {
+		p.PolicyIssuer.Validate(errs.Sub("PolicyIssuer"))
+	}
+	if p.PolicySetDefaults != nil {
+		p.PolicySetDefaults.Validate(errs.Sub("PolicySetDefaults"))
+	}
 	if p.Target != nil {
 		p.Target.Validate(errs.Sub("Target"))
 	}

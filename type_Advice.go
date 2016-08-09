@@ -10,7 +10,7 @@ type Advice struct {
 
 	// Advice identifier.  The value of the advice identifier MAY be
 	// interpreted by the PEP.
-	AdviceId string `xml:",attr"` // TODO: required
+	AdviceId string `xml:",attr"`
 
 	// Advice arguments assignment.  The values of the advice arguments MAY be
 	// interpreted by the PEP.
