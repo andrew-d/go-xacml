@@ -8,3 +8,6 @@ type Condition struct {
 
 	// Insert fields here
 }
+
+func (c Condition) Validate(errs *Errors) {
+}
