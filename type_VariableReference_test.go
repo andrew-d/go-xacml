@@ -8,11 +8,11 @@ import (
 )
 
 func Test_VariableReference(t *testing.T) {
-	input := `<VariableReference></VariableReference>`
+	input := `<VariableReference VariableId="isFooBar"/>`
 
-    dest := &VariableReference{}
+	dest := &VariableReference{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element VariableReference")
 
-	// Insert specific tests here
+	assert.Equal(t, "isFooBar", dest.VariableId)
 }
