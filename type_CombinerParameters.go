@@ -8,3 +8,6 @@ type CombinerParameters struct {
 
 	// Insert fields here
 }
+
+func (c CombinerParameters) Validate(errs *Errors) {
+}

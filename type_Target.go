@@ -8,3 +8,6 @@ type Target struct {
 
 	// Insert fields here
 }
+
+func (t Target) Validate(errs *Errors) {
+}

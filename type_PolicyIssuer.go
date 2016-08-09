@@ -8,3 +8,6 @@ type PolicyIssuer struct {
 
 	// Insert fields here
 }
+
+func (p PolicyIssuer) Validate(errs *Errors) {
+}

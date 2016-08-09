@@ -8,3 +8,6 @@ type Description struct {
 
 	// Insert fields here
 }
+
+func (d Description) Validate(errs *Errors) {
+}

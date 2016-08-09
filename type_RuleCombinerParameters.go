@@ -8,3 +8,6 @@ type RuleCombinerParameters struct {
 
 	// Insert fields here
 }
+
+func (r RuleCombinerParameters) Validate(errs *Errors) {
+}

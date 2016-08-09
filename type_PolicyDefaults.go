@@ -8,3 +8,6 @@ type PolicyDefaults struct {
 
 	// Insert fields here
 }
+
+func (p PolicyDefaults) Validate(errs *Errors) {
+}

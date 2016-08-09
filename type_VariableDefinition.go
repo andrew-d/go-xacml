@@ -8,3 +8,6 @@ type VariableDefinition struct {
 
 	// Insert fields here
 }
+
+func (v VariableDefinition) Validate(errs *Errors) {
+}

@@ -8,3 +8,6 @@ type AdviceExpressions struct {
 
 	// Insert fields here
 }
+
+func (a AdviceExpressions) Validate(errs *Errors) {
+}

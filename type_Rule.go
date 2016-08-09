@@ -8,3 +8,6 @@ type Rule struct {
 
 	// Insert fields here
 }
+
+func (r Rule) Validate(errs *Errors) {
+}

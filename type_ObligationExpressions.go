@@ -8,3 +8,6 @@ type ObligationExpressions struct {
 
 	// Insert fields here
 }
+
+func (o ObligationExpressions) Validate(errs *Errors) {
+}
