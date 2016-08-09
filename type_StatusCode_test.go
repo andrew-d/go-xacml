@@ -8,11 +8,16 @@ import (
 )
 
 func Test_StatusCode(t *testing.T) {
-	input := `<StatusCode></StatusCode>`
+	input := `
+	<StatusCode Value="parent">
+		<StatusCode
+			Value="urn:oasis:names:tc:xacml:1.0:status:ok"/>
+	</StatusCode>`
 
-    dest := &StatusCode{}
+	dest := &StatusCode{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element StatusCode")
 
-	// Insert specific tests here
+	assert.Equal(t, "parent", dest.Value)
+	assert.Equal(t, "urn:oasis:names:tc:xacml:1.0:status:ok", dest.StatusCode.Value)
 }
