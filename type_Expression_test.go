@@ -10,7 +10,7 @@ import (
 func Test_Expression(t *testing.T) {
 	input := `<Expression></Expression>`
 
-    dest := &Expression{}
+	dest := &Expression{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element Expression")
 

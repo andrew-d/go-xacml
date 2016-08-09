@@ -10,7 +10,7 @@ import (
 func Test_Attributes(t *testing.T) {
 	input := `<Attributes></Attributes>`
 
-    dest := &Attributes{}
+	dest := &Attributes{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element Attributes")
 

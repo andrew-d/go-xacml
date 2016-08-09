@@ -10,7 +10,7 @@ import (
 func Test_MultiRequests(t *testing.T) {
 	input := `<MultiRequests></MultiRequests>`
 
-    dest := &MultiRequests{}
+	dest := &MultiRequests{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element MultiRequests")
 

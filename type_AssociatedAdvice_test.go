@@ -10,7 +10,7 @@ import (
 func Test_AssociatedAdvice(t *testing.T) {
 	input := `<AssociatedAdvice></AssociatedAdvice>`
 
-    dest := &AssociatedAdvice{}
+	dest := &AssociatedAdvice{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element AssociatedAdvice")
 

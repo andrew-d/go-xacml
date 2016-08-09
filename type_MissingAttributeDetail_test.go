@@ -10,7 +10,7 @@ import (
 func Test_MissingAttributeDetail(t *testing.T) {
 	input := `<MissingAttributeDetail></MissingAttributeDetail>`
 
-    dest := &MissingAttributeDetail{}
+	dest := &MissingAttributeDetail{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element MissingAttributeDetail")
 

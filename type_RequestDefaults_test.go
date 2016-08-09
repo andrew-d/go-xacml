@@ -10,7 +10,7 @@ import (
 func Test_RequestDefaults(t *testing.T) {
 	input := `<RequestDefaults></RequestDefaults>`
 
-    dest := &RequestDefaults{}
+	dest := &RequestDefaults{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element RequestDefaults")
 

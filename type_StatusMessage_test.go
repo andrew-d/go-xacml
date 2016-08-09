@@ -10,7 +10,7 @@ import (
 func Test_StatusMessage(t *testing.T) {
 	input := `<StatusMessage></StatusMessage>`
 
-    dest := &StatusMessage{}
+	dest := &StatusMessage{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element StatusMessage")
 

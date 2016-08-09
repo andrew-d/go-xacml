@@ -10,7 +10,7 @@ import (
 func Test_Content(t *testing.T) {
 	input := `<Content></Content>`
 
-    dest := &Content{}
+	dest := &Content{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element Content")
 

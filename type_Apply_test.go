@@ -10,7 +10,7 @@ import (
 func Test_Apply(t *testing.T) {
 	input := `<Apply></Apply>`
 
-    dest := &Apply{}
+	dest := &Apply{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element Apply")
 

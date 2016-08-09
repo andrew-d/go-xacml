@@ -10,7 +10,7 @@ import (
 func Test_PolicyIssuer(t *testing.T) {
 	input := `<PolicyIssuer></PolicyIssuer>`
 
-    dest := &PolicyIssuer{}
+	dest := &PolicyIssuer{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element PolicyIssuer")
 

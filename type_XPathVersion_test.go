@@ -10,7 +10,7 @@ import (
 func Test_XPathVersion(t *testing.T) {
 	input := `<XPathVersion></XPathVersion>`
 
-    dest := &XPathVersion{}
+	dest := &XPathVersion{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element XPathVersion")
 

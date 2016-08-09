@@ -10,7 +10,7 @@ import (
 func Test_AttributeAssignmentExpression(t *testing.T) {
 	input := `<AttributeAssignmentExpression></AttributeAssignmentExpression>`
 
-    dest := &AttributeAssignmentExpression{}
+	dest := &AttributeAssignmentExpression{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element AttributeAssignmentExpression")
 

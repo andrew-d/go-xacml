@@ -10,7 +10,7 @@ import (
 func Test_Obligations(t *testing.T) {
 	input := `<Obligations></Obligations>`
 
-    dest := &Obligations{}
+	dest := &Obligations{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element Obligations")
 

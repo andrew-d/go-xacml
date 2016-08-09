@@ -10,7 +10,7 @@ import (
 func Test_PolicySetCombinerParameters(t *testing.T) {
 	input := `<PolicySetCombinerParameters></PolicySetCombinerParameters>`
 
-    dest := &PolicySetCombinerParameters{}
+	dest := &PolicySetCombinerParameters{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element PolicySetCombinerParameters")
 
