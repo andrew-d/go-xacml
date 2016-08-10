@@ -45,7 +45,7 @@ func (a *AttributeAssignmentExpression) UnmarshalXML(decoder *xml.Decoder, start
 		}
 	}
 
-	exp, err := ParseExpressions(decoder, start)
+	exp, err := ParseExpressions(decoder, start, nil)
 	if err != nil {
 		return err
 	}
@@ -69,5 +69,8 @@ func (a AttributeAssignmentExpression) Validate(errs *Errors) {
 	}
 	if a.Expression == nil {
 		errs.Addf("Expression not given")
+	} else {
+		val := a.Expression.(Validatable)
+		val.Validate(errs.Sub("Expression"))
 	}
 }

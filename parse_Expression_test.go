@@ -14,7 +14,7 @@ type expressionContainer struct {
 }
 
 func (c *expressionContainer) UnmarshalXML(decoder *xml.Decoder, start xml.StartElement) error {
-	c.Expressions, c.Err = ParseExpressions(decoder, start)
+	c.Expressions, c.Err = ParseExpressions(decoder, start, nil)
 	return nil
 }
 

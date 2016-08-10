@@ -21,7 +21,13 @@ type ExpressionType interface{}
 // Starting from the given element, will attempt to parse children that
 // implement <Expression>.  Note that this does not parse attributes on the
 // given start element.
-func ParseExpressions(decoder *xml.Decoder, start xml.StartElement) ([]ExpressionType, error) {
+func ParseExpressions(decoder *xml.Decoder, start xml.StartElement, unknown func(xml.StartElement) error) ([]ExpressionType, error) {
+	if unknown == nil {
+		unknown = func(tok xml.StartElement) error {
+			return fmt.Errorf("unknown element does not implement <Expression>: %s", tok.Name.Local)
+		}
+	}
+
 	ret := []ExpressionType{}
 
 	for {
@@ -48,7 +54,10 @@ func ParseExpressions(decoder *xml.Decoder, start xml.StartElement) ([]Expressio
 			case "VariableReference":
 				elementStruct = &VariableReference{}
 			default:
-				return nil, fmt.Errorf("unknown element does not implement <Expression>: %s", tok.Name.Local)
+				if err := unknown(tok); err != nil {
+					return nil, err
+				}
+				continue
 			}
 
 			if err = decoder.DecodeElement(elementStruct, &tok); err != nil {
