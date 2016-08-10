@@ -2,9 +2,11 @@ package xacml
 
 import "encoding/xml"
 
-// 5.XX: TODO DESCRIPTION HERE
+// 5.57: The <StatusDetail> element qualifies the <Status> element with
+// additional information.
 type StatusDetail struct {
 	XMLName xml.Name `xml:"StatusDetail"`
 
-	// Insert fields here
+	// The <StatusDetail> element allows arbitrary XML content.
+	XML string `xml:",innerxml"`
 }

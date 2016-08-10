@@ -8,11 +8,11 @@ import (
 )
 
 func Test_StatusDetail(t *testing.T) {
-	input := `<StatusDetail></StatusDetail>`
+	input := `<StatusDetail><foo>bar</foo></StatusDetail>`
 
 	dest := &StatusDetail{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element StatusDetail")
 
-	// Insert specific tests here
+	assert.Equal(t, "<foo>bar</foo>", dest.XML)
 }
