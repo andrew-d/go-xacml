@@ -8,3 +8,6 @@ type Attributes struct {
 
 	// Insert fields here
 }
+
+func (a Attributes) Validate(errs *Errors) {
+}

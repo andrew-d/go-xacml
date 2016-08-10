@@ -8,3 +8,6 @@ type MultiRequests struct {
 
 	// Insert fields here
 }
+
+func (m MultiRequests) Validate(errs *Errors) {
+}
