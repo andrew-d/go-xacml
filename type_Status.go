@@ -16,3 +16,11 @@ type Status struct {
 	// Additional status information.
 	StatusDetail *StatusDetail `xml:"StatusDetail"`
 }
+
+func (s Status) Validate(errs *Errors) {
+	s.StatusCode.Validate(errs.Sub("StatusCode"))
+
+	if s.StatusDetail != nil {
+		s.StatusDetail.Validate(errs.Sub("StatusDetail"))
+	}
+}

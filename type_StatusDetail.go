@@ -10,3 +10,7 @@ type StatusDetail struct {
 	// The <StatusDetail> element allows arbitrary XML content.
 	XML string `xml:",innerxml"`
 }
+
+func (s StatusDetail) Validate(errs *Errors) {
+	// Validations require knowing the status code, which we don't.
+}
