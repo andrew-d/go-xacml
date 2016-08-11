@@ -14,7 +14,7 @@ type Advice struct {
 
 	// Advice arguments assignment.  The values of the advice arguments MAY be
 	// interpreted by the PEP.
-	Assignments []AttributeAssignment `xml:"AttributeAssignment"`
+	AttributeAssignments []AttributeAssignment `xml:"AttributeAssignment"`
 }
 
 func (a Advice) Validate(errs *Errors) {
@@ -22,7 +22,7 @@ func (a Advice) Validate(errs *Errors) {
 		errs.Addf("AdviceId not given")
 	}
 
-	for i, assignment := range a.Assignments {
-		assignment.Validate(errs.SubN("Assignments", i))
+	for i, assignment := range a.AttributeAssignments {
+		assignment.Validate(errs.SubN("AttributeAssignments", i))
 	}
 }

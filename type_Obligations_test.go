@@ -23,9 +23,9 @@ func Test_Obligations(t *testing.T) {
 
 	if assert.Len(t, dest.Obligations, 1) {
 		assert.Equal(t, "obligation-id", dest.Obligations[0].ObligationId)
-		if assert.Len(t, dest.Obligations[0].Assignments, 1) {
-			assert.Equal(t, "attribute-1", dest.Obligations[0].Assignments[0].AttributeId)
-			assert.Equal(t, "value1", dest.Obligations[0].Assignments[0].Value)
+		if assert.Len(t, dest.Obligations[0].AttributeAssignments, 1) {
+			assert.Equal(t, "attribute-1", dest.Obligations[0].AttributeAssignments[0].AttributeId)
+			assert.Equal(t, "value1", dest.Obligations[0].AttributeAssignments[0].Value)
 		}
 	}
 }

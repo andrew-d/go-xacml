@@ -20,8 +20,8 @@ func Test_Obligation(t *testing.T) {
 	assert.NoError(t, err, "Error unmarshalling input for element Obligation")
 
 	assert.Equal(t, "obligation-id", dest.ObligationId)
-	if assert.Len(t, dest.Assignments, 1) {
-		assert.Equal(t, "attribute-1", dest.Assignments[0].AttributeId)
-		assert.Equal(t, "value1", dest.Assignments[0].Value)
+	if assert.Len(t, dest.AttributeAssignments, 1) {
+		assert.Equal(t, "attribute-1", dest.AttributeAssignments[0].AttributeId)
+		assert.Equal(t, "value1", dest.AttributeAssignments[0].Value)
 	}
 }

@@ -14,7 +14,7 @@ type Obligation struct {
 
 	// Obligation arguments assignment.  The values of the obligation
 	// arguments SHALL be interpreted by the PEP.
-	Assignments []AttributeAssignment `xml:"AttributeAssignment"`
+	AttributeAssignments []AttributeAssignment `xml:"AttributeAssignment"`
 }
 
 func (o Obligation) Validate(errs *Errors) {
@@ -22,7 +22,7 @@ func (o Obligation) Validate(errs *Errors) {
 		errs.Addf("ObligationId not given")
 	}
 
-	for i, el := range o.Assignments {
-		el.Validate(errs.SubN("Assignments", i))
+	for i, el := range o.AttributeAssignments {
+		el.Validate(errs.SubN("AttributeAssignments", i))
 	}
 }
