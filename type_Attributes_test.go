@@ -32,7 +32,7 @@ func Test_Attributes(t *testing.T) {
 	assert.Equal(t, "urn:oasis:names:tc:xacml:1.0:subject-category:access-subject", dest.Category)
 
 	if assert.Len(t, dest.Attributes, 1) {
-		// TODO: assert attribute
+		assert.Equal(t, "urn:oasis:names:tc:xacml:1.0:subject:subject-id", dest.Attributes[0].AttributeId)
 	}
 
 	assert.Equal(t, "foo bar", dest.Content.XML)
