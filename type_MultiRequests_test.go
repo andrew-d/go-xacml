@@ -8,11 +8,20 @@ import (
 )
 
 func Test_MultiRequests(t *testing.T) {
-	input := `<MultiRequests></MultiRequests>`
+	input := `
+	<MultiRequests>
+		<RequestReference>
+			<AttributesReference ReferenceId="subject1"/>
+		</RequestReference>
+	</MultiRequests>`
 
 	dest := &MultiRequests{}
 	err := xml.Unmarshal([]byte(input), dest)
 	assert.NoError(t, err, "Error unmarshalling input for element MultiRequests")
 
-	// Insert specific tests here
+	if refs := dest.RequestReferences; assert.Len(t, refs, 1) {
+		if arefs := refs[0].AttributesReferences; assert.Len(t, arefs, 1) {
+			assert.Equal(t, "subject1", arefs[0].ReferenceId)
+		}
+	}
 }
