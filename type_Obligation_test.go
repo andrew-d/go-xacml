@@ -9,9 +9,7 @@ import (
 
 func Test_Obligation(t *testing.T) {
 	input := `
-	<Obligation
-		ObligationId="obligation-id" >
-
+	<Obligation ObligationId="obligation-id" >
 		<AttributeAssignment
 			AttributeId="attribute-1"
 			DataType="http://www.w3.org/2001/XMLSchema#string">value1</AttributeAssignment>
