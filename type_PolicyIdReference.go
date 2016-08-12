@@ -12,15 +12,15 @@ type PolicyIdReference struct {
 
 	// Specifies a matching expression for the version of the policy
 	// referenced.
-	Version string `xml:",attr"`
+	Version string `xml:",attr,omitempty"`
 
 	// Specifies a matching expression for the earliest acceptable version
 	// of the policy referenced.
-	EarliestVersion string `xml:",attr"`
+	EarliestVersion string `xml:",attr,omitempty"`
 
 	// Specifies a matching expression for the latest acceptable version of
 	// the policy referenced.
-	LatestVersion string `xml:",attr"`
+	LatestVersion string `xml:",attr,omitempty"`
 
 	// TODO: Do we need to use "innerxml", or can we actually use "chardata"?
 	Value string `xml:",chardata"`

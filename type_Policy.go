@@ -62,7 +62,7 @@ type Policy struct {
 	MaxDelegationDepth int `xml:",attr,omitempty"`
 
 	// A free-form description of the policy.  See Section 5.2.
-	Description string `xml:"Description"`
+	Description string `xml:"Description,omitempty"`
 
 	// Attributes of the issuer of the policy.
 	PolicyIssuer *PolicyIssuer `xml:"PolicyIssuer"`

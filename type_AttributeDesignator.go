@@ -41,6 +41,10 @@ type AttributeDesignator struct {
 	// empty bag in the event the named attribute is absent from the request
 	// context.  See Section 7.3.5.  Also see Sections 7.19.2 and 7.19.3.
 	MustBePresent *bool `xml:",attr"`
+
+	// Note: this does not appear in the spec, but does appear in a
+	// conformance test.  We include it here, just in case.
+	SubjectCategory string `xml:",attr,omitempty"`
 }
 
 func (a *AttributeDesignator) Validate(errs *Errors) {

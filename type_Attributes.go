@@ -17,7 +17,7 @@ type Attributes struct {
 	// This attribute provides a unique identifier for this <Attributes>
 	// element. See [XMLid] It is primarily intended to be referenced in
 	// multiple requests. See [Multi].
-	Id string `xml:"id,attr"`
+	Id string `xml:"http://www.w3.org/XML/1998/namespace id,attr,omitempty"`
 
 	// Specifies additional sources of attributes in free form XML document
 	// format which can be referenced using <AttributeSelector> elements.

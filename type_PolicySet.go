@@ -64,10 +64,10 @@ type PolicySet struct {
 
 	// If present, limits the depth of delegation which is authorized by
 	// this policy set. See the delegation profile [XACMLAdmin].
-	MaxDelegationDepth int `xml:",attr"`
+	MaxDelegationDepth int `xml:",attr,omitempty"`
 
 	// A free-form description of the policy set.
-	Description string `xml:"Description"`
+	Description string `xml:"Description,omitempty"`
 
 	// Attributes of the issuer of the policy set.
 	PolicyIssuer *PolicyIssuer `xml:"PolicyIssuer"`

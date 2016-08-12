@@ -17,7 +17,7 @@ type Apply struct {
 	FunctionId string `xml:",attr"`
 
 	// A free-form description of the <Apply> element.
-	Description string `xml:"Description"`
+	Description string `xml:"Description,omitempty"`
 
 	// Arguments to the function, which may include other functions.
 	Arguments []ExpressionType `xml:",any"`

@@ -11,7 +11,7 @@ type Status struct {
 	StatusCode StatusCode `xml:"StatusCode"`
 
 	// A status message describing the status code.
-	StatusMessage string `xml:"StatusMessage"`
+	StatusMessage string `xml:"StatusMessage,omitempty"`
 
 	// Additional status information.
 	StatusDetail *StatusDetail `xml:"StatusDetail"`
