@@ -59,7 +59,7 @@ type Policy struct {
 
 	// If present, limits the depth of delegation which is authorized by this
 	// policy. See the delegation profile [XACMLAdmin].
-	MaxDelegationDepth int `xml:",attr"`
+	MaxDelegationDepth int `xml:",attr,omitempty"`
 
 	// A free-form description of the policy.  See Section 5.2.
 	Description string `xml:"Description"`
