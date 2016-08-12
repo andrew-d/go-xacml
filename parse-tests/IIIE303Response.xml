@@ -15,12 +15,12 @@
 	      <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Julius Hibbert</AttributeValue>
 	    </Attribute>
 	  </Attributes>
-	  <Attributes xml:id="resource" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource">
+	  <Attributes xml:id="resource1" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource">
 	    <Attribute IncludeInResult="true" AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id">
 	      <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#anyURI">http://medico.com/record/patient/BartSimpson</AttributeValue>
 	    </Attribute>
 	  </Attributes>
-	  <Attributes xml:id="action" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action">
+	  <Attributes xml:id="action1" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action">
 	    <Attribute IncludeInResult="true" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id">
 	      <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
 	    </Attribute>
@@ -37,12 +37,12 @@
 	      <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Julius Hilbert</AttributeValue>
 	    </Attribute>
 	  </Attributes>
-	  <Attributes xml:id="resource" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource">
+	  <Attributes xml:id="resource2" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource">
 	    <Attribute IncludeInResult="true" AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id">
 	      <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#anyURI">http://medico.com/record/patient/BartSimpson</AttributeValue>
 	    </Attribute>
 	  </Attributes>
-	  <Attributes xml:id="action" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action">
+	  <Attributes xml:id="action2" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action">
 	    <Attribute IncludeInResult="true" AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id">
 	      <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
 	    </Attribute>
