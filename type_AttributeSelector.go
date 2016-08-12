@@ -17,7 +17,7 @@ type AttributeSelector struct {
 	// indicates the attributes category containing the applicable
 	// ContextSelectorId attribute, if the element includes a ContextSelectorId
 	// xml attribute.
-	Category string
+	Category string `xml:",attr"`
 
 	// This attribute refers to the attribute (by its AttributeId) in the
 	// request context in the category given by the Category attribute. The
@@ -26,21 +26,21 @@ type AttributeSelector struct {
 	// a single node in the <Content> element.  The XPathCategory attribute of
 	// the referenced attribute MUST be equal to the Category attribute of the
 	// attribute selector.
-	ContextSelectorId string
+	ContextSelectorId string `xml:",attr,omitempty"`
 
 	// This attribute SHALL contain an XPath expression to be evaluated against
 	// the specified XML content.  See Section 7.3.7 for details of the XPath
 	// evaluation during <AttributeSelector> processing.
-	Path string
+	Path string `xml:",attr"`
 
 	// The attribute specifies the datatype of the values returned from the
 	// evaluation of this <AttributeSelector> element.
-	DataType string
+	DataType string `xml:",attr"`
 
 	// This attribute governs whether the element returns “Indeterminate” or an
 	// empty bag in the event the XPath expression selects no node.  See
 	// Section 7.3.5.  Also see Sections 7.19.2 and 7.19.3.
-	MustBePresent *bool
+	MustBePresent *bool `xml:",attr"`
 }
 
 func (a *AttributeSelector) Validate(errs *Errors) {
