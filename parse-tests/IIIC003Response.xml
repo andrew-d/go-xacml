@@ -4,49 +4,49 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17
         http://docs.oasis-open.org/xacml/3.0/xacml-core-v3-schema-wd-17.xsd">
-    <Result ResourceId="urn:root">
+    <Result>
         <Decision>Permit</Decision>
         <Status>
             <StatusCode
                   Value="urn:oasis:names:tc:xacml:1.0:status:ok"/>
         </Status>
     </Result>
-    <Result ResourceId="urn:root:child1">
+    <Result>
         <Decision>Deny</Decision>
         <Status>
             <StatusCode
                   Value="urn:oasis:names:tc:xacml:1.0:status:ok"/>
         </Status>
     </Result>
-    <Result ResourceId="urn:root:child2">
+    <Result>
         <Decision>Deny</Decision>
         <Status>
             <StatusCode
                   Value="urn:oasis:names:tc:xacml:1.0:status:ok"/>
         </Status>
     </Result>
-    <Result ResourceId="urn:root:child1:descendant1">
+    <Result>
         <Decision>Deny</Decision>
         <Status>
             <StatusCode
                   Value="urn:oasis:names:tc:xacml:1.0:status:ok"/>
         </Status>
     </Result>
-    <Result ResourceId="urn:root:child1:descendant2">
+    <Result>
         <Decision>Deny</Decision>
         <Status>
             <StatusCode
                   Value="urn:oasis:names:tc:xacml:1.0:status:ok"/>
         </Status>
     </Result>
-    <Result ResourceId="urn:root:child2:descendant1">
+    <Result>
         <Decision>Deny</Decision>
         <Status>
             <StatusCode
                   Value="urn:oasis:names:tc:xacml:1.0:status:ok"/>
         </Status>
     </Result>
-    <Result ResourceId="urn:root:child2:descendant2">
+    <Result>
         <Decision>Deny</Decision>
         <Status>
             <StatusCode
