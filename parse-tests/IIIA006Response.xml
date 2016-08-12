@@ -12,8 +12,7 @@
         </Status>
         <Obligations>
             <Obligation
-                ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA006:obligation-3"
-                FulfillOn="Deny">
+                ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA006:obligation-3">
                 <AttributeAssignment
                     AttributeId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA006:assignment1"
                     DataType="http://www.w3.org/2001/XMLSchema#string">assignment1</AttributeAssignment>
@@ -22,8 +21,7 @@
                     DataType="http://www.w3.org/2001/XMLSchema#string">assignment2</AttributeAssignment>
             </Obligation>
             <Obligation
-                ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA006:obligation-4"
-                FulfillOn="Deny">
+                ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA006:obligation-4">
                 <AttributeAssignment
                     AttributeId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA006:assignment1"
                     DataType="http://www.w3.org/2001/XMLSchema#string">assignment1</AttributeAssignment>

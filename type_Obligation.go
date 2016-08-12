@@ -12,10 +12,6 @@ type Obligation struct {
 	// be interpreted by the PEP.
 	ObligationId string `xml:",attr"`
 
-	// The spec does not include this attribute, but a bunch of our
-	// conformance tests do.  We're going to include it anyway.
-	FulfillOn string `xml:",attr,omitempty"`
-
 	// Obligation arguments assignment.  The values of the obligation
 	// arguments SHALL be interpreted by the PEP.
 	AttributeAssignments []AttributeAssignment `xml:"AttributeAssignment"`

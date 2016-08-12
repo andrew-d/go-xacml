@@ -13,8 +13,7 @@
 
     <Obligations>
         <Obligation
-            ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA014:policy3:obligation-3"
-            FulfillOn="Deny">
+            ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA014:policy3:obligation-3">
             <AttributeAssignment
                 AttributeId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA014:policy3:assignment1"
                 DataType="http://www.w3.org/2001/XMLSchema#string">assignment1</AttributeAssignment>
@@ -23,8 +22,7 @@
                 DataType="http://www.w3.org/2001/XMLSchema#string">assignment2</AttributeAssignment>
         </Obligation>
         <Obligation
-            ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA014:policy3:obligation-4"
-            FulfillOn="Deny">
+            ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA014:policy3:obligation-4">
             <AttributeAssignment
                 AttributeId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA014:policy3:assignment1"
                 DataType="http://www.w3.org/2001/XMLSchema#string">assignment1</AttributeAssignment>
@@ -33,8 +31,7 @@
                 DataType="http://www.w3.org/2001/XMLSchema#string">assignment2</AttributeAssignment>
         </Obligation>
         <Obligation
-            ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA014:policyset:obligation-3"
-            FulfillOn="Deny">
+            ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA014:policyset:obligation-3">
             <AttributeAssignment
                 AttributeId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA014:policyset:assignment1"
                 DataType="http://www.w3.org/2001/XMLSchema#string">assignment1</AttributeAssignment>
@@ -43,8 +40,7 @@
                 DataType="http://www.w3.org/2001/XMLSchema#string">assignment2</AttributeAssignment>
         </Obligation>
         <Obligation
-            ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA014:policyset:obligation-4"
-            FulfillOn="Deny">
+            ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA014:policyset:obligation-4">
             <AttributeAssignment
                 AttributeId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA014:policyset:assignment1"
                 DataType="http://www.w3.org/2001/XMLSchema#string">assignment1</AttributeAssignment>
