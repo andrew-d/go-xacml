@@ -10,3 +10,9 @@ type Function struct {
 	// The identifier of the function.
 	FunctionId string `xml:",attr"`
 }
+
+func (f Function) Validate(errs *Errors) {
+	if f.FunctionId == "" {
+		errs.Addf("FunctionId not given")
+	}
+}
